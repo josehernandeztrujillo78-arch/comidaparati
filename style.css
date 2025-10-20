@@ -1,0 +1,225 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f6f9f4;
+  color: #333;
+  line-height: 1.6;
+}
+header {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+  padding: 4rem 1rem;
+  border-radius: 0 0 25px 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+
+.img-01{
+    width: 250px;
+    height: 150px;
+    border-radius: 25px;
+}
+.img-02{
+    width: 250px;
+    height: 150px;
+    border-radius: 25px ;
+}
+.img-03{
+    width: 250px;
+    height: 120px;
+    border-radius: 25px;
+}
+.img-04{
+    width: 250px;
+    height: 150px;
+    border-radius: 25px;
+}
+.img-05{
+    width: 250px;
+    height: 150px;
+    border-radius: 25px;
+}
+.img-06{
+    width: 250px;
+    height: 150px;
+    border-radius: 25px;
+}
+.img-07{
+    width: 250px;
+    height: 150px;
+    border-radius: 25px;
+}
+.img-08{
+    width: 250px;
+    height: 150px;
+    border-radius: 25px;
+}
+.img-09{
+    width: 250px;
+    height: 150px;
+    border-radius: 25px;
+}
+.img-10{
+    width: 250px;
+    height: 150px;
+    border-radius: 25px;
+}
+.img-11{
+    width: 250px;
+    height: 150px;
+    border-radius: 25px;
+}
+.img-12{
+    width: 250px;
+    height: 150px;
+    border-radius: 25px;
+}
+
+.img-13{
+    width: 250px;
+    height: 150px;
+    border-radius: 25px;
+}
+.img-14{
+  width: 70px;
+  height:70px;
+}
+/* Contenedor flexible para logo + texto */
+.logo-contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.logo {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+  box-shadow: 0 0 12px rgba(0,0,0,0.4);
+  background-color: white;
+}
+
+.texto-header h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.texto-header {
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+main {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.categoria {
+  margin-bottom: 2rem;
+  background: #fff;
+  border-radius: 15px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.categoria h3 {
+  color: #5a9f65;
+  margin-bottom: 1rem;
+}
+
+.producto {
+  margin-bottom: 1rem;
+  border-left: 4px solid #5a9f65;
+  padding-left: 10px;
+}
+
+.precio {
+  color: #2b7a0b;
+  font-weight: bold;
+}
+
+#agregar {
+  margin-top: 3rem;
+  background: #e8f5e9;
+  padding: 1.5rem;
+  border-radius: 15px;
+}
+
+#form-producto {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+input, select, button {
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #5a9f65;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4b8756;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #72c27c;
+  color: white;
+  margin-top: 3rem;
+  border-radius: 20px 20px 0 0;
+}
+
+.texto-header p {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #f3f3f3;
+}
+
+#items-carrito .carrito-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  margin-bottom: 3px;
+  border-bottom: 1px solid #ddd;
+}
+
+
+/* Colores para títulos de categorías */
+.categoria h3.smoothies { color:#ff00b7; }
+.categoria h3.postres { color: #bf47ff; }
+.categoria h3.guarniciones { color: #a7282c; }
+.categoria h3.fruta { color: #ff00b7; }
+.categoria h3.ensaladas { color: #0026ff; }
+.categoria h3.Sándwiches{color: #7a6b0b;}
+

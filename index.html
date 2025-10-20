@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comida para ti</title>
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Botón agregar al carrito */
+    .agregar-carrito {
+      display: block;
+      margin: 10px 0 0 0;
+      padding: 8px 12px;
+      background-color: #28a745;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .agregar-carrito:hover {
+      background-color: #218838;
+    }
+
+    /* Carrito */
+    #carrito {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      width: 300px;
+      background: #f9f9f9;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 10px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+      max-height: 80vh;
+      overflow-y: auto;
+      z-index: 9999;
+    }
+    #carrito h3 {
+      margin-top: 0;
+    }
+    .carrito-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px;
+      margin-bottom: 3px;
+      border-bottom: 1px solid #ddd;
+    }
+    .carrito-total {
+      font-weight: bold;
+      text-align: right;
+      margin-top: 10px;
+    }
+    .carrito-vaciar {
+      margin-top: 10px;
+      padding: 5px 10px;
+      background-color: #dc3545;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .carrito-vaciar:hover {
+      background-color: #c82333;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo-contenedor">
+      <img class="logo img-13" src="Images/comida hel.jpeg" alt="Logo Comida para ti">
+      <div class="texto-header">
+        <h1>Comida para ti</h1>
+        <p>Deliciosa comida saludable hecha especialmente para ti</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <section id="menu">
+      <h2>Menú</h2>
+
+      <!-- SÁNDWICHES -->
+      <div class="categoria">
+        <h3 class="Sándwiches">Sándwiches</h3>
+        <article class="producto">
+          <img src="Images/img.webp" class="img-01" alt="Sándwich de Pollo">
+          <div class="info">
+            <h4>Sándwich de Pollo</h4>
+            <p class="descripcion">Pan integral, pollo a la plancha, panela y vegetales frescos.</p>
+            <p class="precio">$60 MXN</p>
+            <button class="agregar-carrito" data-producto="Sándwich de Pollo" data-precio="60">Agregar al carrito</button>
+          </div>
+        </article>
+        <article class="producto">
+          <img src="Images/sandwich de jamon.jpg" class="img-02" alt="Sándwich de Jamón">
+          <div class="info">
+            <h4>Sándwich de Jamón</h4>
+            <p class="descripcion">Jamón de pavo, queso fresco y verduras en pan integral.</p>
+            <p class="precio">$55 MXN</p>
+            <button class="agregar-carrito" data-producto="Sándwich de Jamón" data-precio="55">Agregar al carrito</button>
+          </div>
+        </article>
+        <article class="producto">
+          <img src="Images/sandwich panela.jpeg" class="img-03" alt="Sándwich de Panela">
+          <div class="info">
+            <h4>Sándwich de Panela</h4>
+            <p class="descripcion">Pan integral, panela fresca y vegetales crujientes.</p>
+            <p class="precio">$60 MXN</p>
+            <button class="agregar-carrito" data-producto="Sándwich de Panela" data-precio="60">Agregar al carrito</button>
+          </div>
+        </article>
+      </div>
+
+      <!-- ENSALADAS -->
+      <div class="categoria">
+        <h3 class="ensaladas">Ensaladas</h3>
+        <article class="producto">
+          <img src="Images/ensalada de pollo.jpg" class="img-04" alt="Ensalada de Pollo">
+          <div class="info">
+            <h4>Ensalada de Pollo</h4>
+            <p class="descripcion">Lechuga, pollo, zanahoria, pepino y aderezo ligero.</p>
+            <p class="precio">$70 MXN</p>
+            <button class="agregar-carrito" data-producto="Ensalada de Pollo" data-precio="70">Agregar al carrito</button>
+          </div>
+        </article>
+        <article class="producto">
+          <img src="Images/ensalda de atun.jpg" class="img-05" alt="Ensalada de Atún">
+          <div class="info">
+            <h4>Ensalada de Atún</h4>
+            <p class="descripcion">Atún, lechuga, jitomate cherry, elote y mayonesa light.</p>
+            <p class="precio">$65 MXN</p>
+            <button class="agregar-carrito" data-producto="Ensalada de Atún" data-precio="65">Agregar al carrito</button>
+          </div>
+        </article>
+        <article class="producto">
+          <img src="Images/ensalada panela.jpg" class="img-06" alt="Ensalada con Panela">
+          <div class="info">
+            <h4>Ensalada con Panela</h4>
+            <p class="descripcion">Panela fresca, espinacas, pepino y vinagreta de limón.</p>
+            <p class="precio">$60 MXN</p>
+            <button class="agregar-carrito" data-producto="Ensalada con Panela" data-precio="60">Agregar al carrito</button>
+          </div>
+        </article>
+      </div>
+
+      <!-- SMOOTHIES -->
+      <div class="categoria">
+        <h3 class="smoothies">Smoothies</h3>
+        <article class="producto">
+          <img src="Images/fresa.jpg" class="img-08" alt="Smoothie de Fresas">
+          <div class="info">
+            <h4>Smoothie de Fresas</h4>
+            <p class="descripcion">Fresas naturales, yogurth y miel.</p>
+            <p class="precio">$55 MXN</p>
+            <button class="agregar-carrito" data-producto="Smoothie de Fresas" data-precio="55">Agregar al carrito</button>
+          </div>
+        </article>
+        <article class="producto">
+          <img src="Images/verde.jpg" class="img-09" alt="Smoothie Verde">
+          <div class="info">
+            <h4>Smoothie Verde</h4>
+            <p class="descripcion">Piña, espinaca, manzana y apio.</p>
+            <p class="precio">$58 MXN</p>
+            <button class="agregar-carrito" data-producto="Smoothie Verde" data-precio="58">Agregar al carrito</button>
+          </div>
+        </article>
+      </div>
+
+      <!-- GUARNICIONES -->
+      <div class="categoria">
+        <h3 class="guarniciones">Guarniciones</h3>
+        <article class="producto">
+          <img src="Images/arroz.jpg" class="img-10" alt="Arroz integral con verduras">
+          <div class="info">
+            <h4>Arroz con verduras</h4>
+            <p class="descripcion">Porción saludable de arroz con vegetales.</p>
+            <p class="precio">$40 MXN</p>
+            <button class="agregar-carrito" data-producto="Arroz con verduras" data-precio="40">Agregar al carrito</button>
+          </div>
+        </article>
+      </div>
+        
+
+      <!-- POSTRES -->
+      <div class="categoria">
+        <h3 class="postres">Postres</h3>
+        <article class="producto">
+          <img src="Images/hot cakes integrales.jpg" class="img-11" alt="Hot Cakes Integrales">
+          <div class="info">
+            <h4>Hot Cakes Integrales</h4>
+            <p class="descripcion">2 piezas de Hot Cakes Integrales.</p>
+            <p class="precio">$55 MXN</p>
+            <button class="agregar-carrito" data-producto="Hot Cakes Integrales" data-precio="55">Agregar al carrito</button>
+          </div>
+        </article>
+        <article class="producto">
+          <img src="Images/fruta picad.jpg" class="img-07" alt="Fruta con Yogurth y Cereal">
+          <div class="info">
+           <h4>Fruta con Yogurth y Cereal</h4>
+           <p class="descripcion">Fruta de temporada con yogurth natural y granola crujiente.</p>
+           <p class="precio">$50 MXN</p>
+           <button class="agregar-carrito" data-producto="Fruta con Yogurth y Cereal" data-precio="50">Agregar al carrito</button>
+          </div>
+        </article>
+      </div>
+
+      <!-- WHATSAPP -->
+      <section id="Listo Envia Tu Pedido">
+        <h2>Listo Envia Tu Pedido</h2>
+        <a href="#" id="btn-whatsapp" target="_blank">
+          <img src="Images/whatsapp.webp" class="img-12" alt="Icono de WhatsApp">
+        </a>
+        <h3 style="color: red; font-size: 25px; font-family: Arial;">Da click en el icono</h3>
+      </section>
+    </section>
+  </main>
+
+  <!-- CARRITO -->
+  <div id="carrito">
+    <h3>Carrito</h3>
+    <div class="carrito-imagen">
+     <img src="Images/carrito de compras.jpg" class="img-14" alt="Carrito de compras">
+    </div>
+    <div id="items-carrito"></div>
+    <div class="carrito-total">Total: $0 MXN</div>
+    <button class="carrito-vaciar">Vaciar carrito</button>
+  </div>
+
+  <!-- FOOTER -->
+<footer>
+  <p>© 2025 Comida para ti - Todos los derechos reservados</p>
+  <p>
+    Dirección: 
+    <a href="https://www.google.com/maps/search/?api=1&query=Calle+Falsa+123,+Colonia+Centro,+Ciudad,+México" 
+       target="_blank" 
+       style="color: #28a745; text-decoration: none; font-weight: bold;">
+      Calle Falsa 123, Colonia Centro, Ciudad, México
+    </a>
+  </p>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
