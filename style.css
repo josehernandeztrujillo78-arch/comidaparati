@@ -7,7 +7,7 @@
 :root {
   --primary: #2d6a4f;
   --primary-light: #40916c;
-  --primary-dark: #1b4332;
+  --primary-dark: #063d12;
   --secondary: #95d5b2;
   --accent: #d8f3dc;
   --background: #f8faf9;
@@ -106,7 +106,7 @@ header {
 
 /* Hero */
 .hero {
-  background: linear-gradient(#e61010e6, rgba(102, 226, 30, 0.9)),
+  background: linear-gradient(#1e5704e6, rgba(233, 161, 27, 0.9)),
     url("/placeholder.svg?height=400&width=1200");
   background-size: cover;
   background-position: center;
